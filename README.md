@@ -31,17 +31,17 @@ Installation: default plugin selection
 
 # Test cases
 1. Jenkins with git-plugin excluding rebase patch.
-  1. both jobs are going to modify the same file (`test-files/single-file.txt`) appending new rows.
+  a. both jobs are going to modify the same file (`test-files/single-file.txt`) appending new rows.
     - Expected result: git push rejected for `Job A`, but accepted for `Job B`
-  2. both jobs are going to modify two different files (`test-files/first-file.txt`,`test-files/second-file.txt`,each one a different in different job) appending new rows.
+  b. both jobs are going to modify two different files (`test-files/first-file.txt`,`test-files/second-file.txt`,each one a different in different job) appending new rows.
     - Expected result: git push rejected for `Job A`, but accepted for `Job B`
-  3. both jobs are going to modify the same file (`test-files/single-file.txt`) replacing all rows.
+  c. both jobs are going to modify the same file (`test-files/single-file.txt`) replacing all rows.
     - Expected result: git push rejected for `Job A`, but accepted for `Job B`
     -
 2. Jenkins with git-plugin including rebase patch.
-  1. both jobs are going to modify the same file (`test-files/single-file.txt`) appending new rows.
+  a. both jobs are going to modify the same file (`test-files/single-file.txt`) appending new rows.
     - Expected result: git push accepted for `Job A` and `Job B`
-  2. both jobs are going to modify two different files (`test-files/first-file.txt`,`test-files/second-file.txt`,each one a different in different job) appending new rows.
+  b. both jobs are going to modify two different files (`test-files/first-file.txt`,`test-files/second-file.txt`,each one a different in different job) appending new rows.
     - Expected result: git push rejected for `Job A` and `Job B`
-  3. both jobs are going to modify the same file (`test-files/single-file.txt`) replacing all rows.
+  c. both jobs are going to modify the same file (`test-files/single-file.txt`) replacing all rows.
     - Expected result: git push rejected for `Job A`, but accepted for `Job B`
