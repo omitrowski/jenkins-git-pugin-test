@@ -65,26 +65,24 @@ Two similar Jenkins jobs using the same (this) git repository are triggered simu
 
 # Results
 
-### Test preparation results
+## Test preparation results
 
-##### Case a ([results/preparation/case-a/CASE-A.md][e8a25f3b])
+### Case a ([results/preparation/case-a/CASE-A.md][e8a25f3b])
 
-**1.** As expected in **Case a.** git push have been rejected from second git repo clone
+**1.** As expected git push have been rejected from second git repo clone
 - ![1](results/preparation/case-a/1-git-commit-push.jpg)
 
-**2.** Not as expected in **Case b.** rebase auto-merge failed
+**2.** Not as expected rebase auto-merge failed
 - ![2](results/preparation/case-a/3-git-rebase.jpg)
 
 **3.** Accordingly case **Case c.** is obsolete.
 
+### Case a ([results/preparation/case-b/CASE-B.md][9dbffb0f])
 
-
-##### Case a ([results/preparation/case-b/CASE-B.md][9dbffb0f])
-
-**1.** As expected in **Case a.** git push have been rejected from second git repo clone
+**1.** As expected git push have been rejected from second git repo clone
 - ![1](results/preparation/case-b/2-git-push.jpg)
 
-**2.** As expected in **Case b.** git push have been accepted after `git pull && git rebase` from second git repo clone
+**2.** As expected git push have been accepted after `git pull && git rebase` from second git repo clone
 - ![2](results/preparation/case-b/4-git-push-after-rebase.jpg)
 
 
