@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+
+  jenkins:
+    container_name: jenkins
+    cgroup_parent: jenkins
+    image: jenkins/jenkins
+    volumes:
+      - ./local/jenkins_home:/var/jenkins_home
+    environment:
+      - JAVA_OPTS=-Dhudson.footerURL=http://localhost:8080 -Dmail.smtp.starttls.enable=true
+    ports:
+      - 0.0.0.0:8080:8080
+    user: root
