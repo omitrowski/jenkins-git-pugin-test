@@ -1,0 +1,93 @@
+18:13:29 Started by upstream project "Test case 3.x/Trigger" build number 1
+18:13:29 originally caused by:
+18:13:29  Started by user Tester
+18:13:29 Running as SYSTEM
+18:13:29 Building in workspace /var/jenkins_home/workspace/Test case 3.x/Test Job A - Test case 3a
+18:13:29 [WS-CLEANUP] Deleting project workspace...
+18:13:29 [WS-CLEANUP] Deferred wipeout is used...
+18:13:29 using credential jenkins-ssh-key
+18:13:29 Cloning the remote Git repository
+18:13:29 Cloning repository git@github.com:omitrowski/jenkins-git-pugin-test.git
+18:13:29  > git init /var/jenkins_home/workspace/Test case 3.x/Test Job A - Test case 3a # timeout=10
+18:13:29 Fetching upstream changes from git@github.com:omitrowski/jenkins-git-pugin-test.git
+18:13:29  > git --version # timeout=10
+18:13:29 using GIT_SSH to set credentials jenkins-pk
+18:13:29  > git fetch --tags --progress git@github.com:omitrowski/jenkins-git-pugin-test.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+18:13:31  > git config remote.origin.url git@github.com:omitrowski/jenkins-git-pugin-test.git # timeout=10
+18:13:31  > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+18:13:31  > git config remote.origin.url git@github.com:omitrowski/jenkins-git-pugin-test.git # timeout=10
+18:13:31 Fetching upstream changes from git@github.com:omitrowski/jenkins-git-pugin-test.git
+18:13:31 using GIT_SSH to set credentials jenkins-pk
+18:13:31  > git fetch --tags --progress git@github.com:omitrowski/jenkins-git-pugin-test.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+18:13:32  > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+18:13:32  > git rev-parse refs/remotes/origin/refs/heads/master^{commit} # timeout=10
+18:13:32 Checking out Revision 1fb41db216e041e36bb6efe9614f51e9f6eb0dd2 (refs/remotes/origin/master)
+18:13:32  > git config core.sparsecheckout # timeout=10
+18:13:32  > git checkout -f 1fb41db216e041e36bb6efe9614f51e9f6eb0dd2 # timeout=10
+18:13:32 Commit message: "modification from Jenkins Test case 2.x/Test Job B - Test case 1b (1)"
+18:13:32 First time build. Skipping changelog.
+18:13:32 [Test Job A - Test case 3a] $ /bin/bash /tmp/jenkins4803178762478794072.sh
+18:13:32 + echo 'modification from Jenkins Test case 3.x/Test Job A - Test case 3a (1)'
+18:13:32 + git diff
+18:13:32 diff --git a/test-files/single-file.txt b/test-files/single-file.txt
+18:13:32 index fac137d..99f5820 100644
+18:13:32 --- a/test-files/single-file.txt
+18:13:32 +++ b/test-files/single-file.txt
+18:13:32 @@ -6,3 +6,4 @@ modification from Jenkins  (3)
+18:13:32  modification from Jenkins  (4)
+18:13:32  modification from Jenkins Test case 1.x/Test Job B - Test case 1a (5)
+18:13:32  modification from Jenkins Test case 2.x/Test Job B - Test case 1a (1)
+18:13:32 +modification from Jenkins Test case 3.x/Test Job A - Test case 3a (1)
+18:13:32 + sleep 60
+18:14:32 + git commit -am 'modification from Jenkins Test case 3.x/Test Job A - Test case 3a (1)'
+18:14:32 [detached HEAD 1929a09] modification from Jenkins Test case 3.x/Test Job A - Test case 3a (1)
+18:14:32  1 file changed, 1 insertion(+)
+18:14:32 using credential jenkins-ssh-key
+18:14:32 Fetch and rebase with master of origin
+18:14:32 Fetching upstream changes from git@github.com:omitrowski/jenkins-git-pugin-test.git
+18:14:32  > git --version # timeout=10
+18:14:32 using GIT_SSH to set credentials jenkins-pk
+18:14:32  > git fetch --tags --progress git@github.com:omitrowski/jenkins-git-pugin-test.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+18:14:34  > git rev-parse HEAD^{commit} # timeout=10
+18:14:34  > git rev-parse origin/master^{commit} # timeout=10
+18:14:34  > git rebase origin/master # timeout=10
+18:14:34  > git rebase --abort # timeout=10
+18:14:34 ERROR: Failed to push branch master to origin
+18:14:34 hudson.plugins.git.GitException: Could not rebase origin/master
+18:14:34 	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$4.execute(CliGitAPIImpl.java:831)
+18:14:34 	at hudson.plugins.git.GitPublisher.perform(GitPublisher.java:310)
+18:14:34 	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+18:14:34 	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:741)
+18:14:34 	at hudson.model.AbstractBuild$AbstractBuildExecution.performAllBuildSteps(AbstractBuild.java:690)
+18:14:34 	at hudson.model.Build$BuildExecution.post2(Build.java:186)
+18:14:34 	at hudson.model.AbstractBuild$AbstractBuildExecution.post(AbstractBuild.java:635)
+18:14:34 	at hudson.model.Run.execute(Run.java:1843)
+18:14:34 	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+18:14:34 	at hudson.model.ResourceController.execute(ResourceController.java:97)
+18:14:34 	at hudson.model.Executor.run(Executor.java:429)
+18:14:34 Caused by: hudson.plugins.git.GitException: Command "git rebase origin/master" returned status code 128:
+18:14:34 stdout: First, rewinding head to replay your work on top of it...
+18:14:34 Applying: modification from Jenkins Test case 3.x/Test Job A - Test case 3a (1)
+18:14:34 Using index info to reconstruct a base tree...
+18:14:34 M	test-files/single-file.txt
+18:14:34 Falling back to patching base and 3-way merge...
+18:14:34 Auto-merging test-files/single-file.txt
+18:14:34 CONFLICT (content): Merge conflict in test-files/single-file.txt
+18:14:34 Patch failed at 0001 modification from Jenkins Test case 3.x/Test Job A - Test case 3a (1)
+18:14:34 The copy of the patch that failed is found in: .git/rebase-apply/patch
+18:14:34
+18:14:34 When you have resolved this problem, run "git rebase --continue".
+18:14:34 If you prefer to skip this patch, run "git rebase --skip" instead.
+18:14:34 To check out the original branch and stop rebasing, run "git rebase --abort".
+18:14:34
+18:14:34
+18:14:34 stderr: error: Failed to merge in the changes.
+18:14:34
+18:14:34 	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2298)
+18:14:34 	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2228)
+18:14:34 	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2224)
+18:14:34 	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommand(CliGitAPIImpl.java:1782)
+18:14:34 	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$4.execute(CliGitAPIImpl.java:828)
+18:14:34 	... 10 more
+18:14:34 Build step 'Git Publisher' marked build as failure
+18:14:34 Finished: FAILURE

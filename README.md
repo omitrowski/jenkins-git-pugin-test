@@ -56,10 +56,16 @@ Two similar Jenkins jobs using the same (this) git repository are triggered simu
   - **Test Case 1.b.** both jobs are going to modify two different files (`test-files/first-file.txt`,`test-files/second-file.txt`,each one a different in different job) appending new rows.
     - Expected result: git push rejected for `Job A`, but accepted for `Job B`
 
-2. Jenkins with git-plugin including rebase patch:
+2. Jenkins with git-plugin including rebase patch but option `rebase before push` not activated:
   - **Test Case 2.a.** both jobs are going to modify the same file (`test-files/single-file.txt`) appending new rows.
-    - Expected result: git push rejected for `Job A` and `Job B`
+    - Expected result: git push rejected for `Job A`, but accepted for `Job B`
   - **Test Case 2.b.** both jobs are going to modify two different files (`test-files/first-file.txt`,`test-files/second-file.txt`,each one a different in different job) appending new rows.
+    - Expected result: git push rejected for `Job A`, but accepted for `Job B`
+
+3. Jenkins with git-plugin including rebase patch and activated option `rebase before push`:
+  - **Test Case 3.a.** both jobs are going to modify the same file (`test-files/single-file.txt`) appending new rows.
+    - Expected result: git push rejected for `Job A`, but accepted for `Job B`
+  - **Test Case 3.b.** both jobs are going to modify two different files (`test-files/first-file.txt`,`test-files/second-file.txt`,each one a different in different job) appending new rows.
     - Expected result: git push accepted for `Job A` and `Job B`
 
 

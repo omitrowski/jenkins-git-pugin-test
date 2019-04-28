@@ -1,0 +1,78 @@
+17:18:41 Started by upstream project "Test case 1.x/Trigger" build number 5
+17:18:41 originally caused by:
+17:18:41  Started by user Tester
+17:18:41 Running as SYSTEM
+17:18:41 Building in workspace /var/jenkins_home/workspace/Test case 1.x/Test Job A - Test case 1a
+17:18:41 [WS-CLEANUP] Deleting project workspace...
+17:18:41 [WS-CLEANUP] Deferred wipeout is used...
+17:18:41 [WS-CLEANUP] Done
+17:18:41 using credential jenkins-ssh-key
+17:18:41 Cloning the remote Git repository
+17:18:41 Cloning repository git@github.com:omitrowski/jenkins-git-pugin-test.git
+17:18:41  > git init /var/jenkins_home/workspace/Test case 1.x/Test Job A - Test case 1a # timeout=10
+17:18:41 Fetching upstream changes from git@github.com:omitrowski/jenkins-git-pugin-test.git
+17:18:41  > git --version # timeout=10
+17:18:41 using GIT_SSH to set credentials jenkins-pk
+17:18:41  > git fetch --tags --progress git@github.com:omitrowski/jenkins-git-pugin-test.git +refs/heads/*:refs/remotes/origin/*
+17:18:43  > git config remote.origin.url git@github.com:omitrowski/jenkins-git-pugin-test.git # timeout=10
+17:18:43  > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+17:18:43  > git config remote.origin.url git@github.com:omitrowski/jenkins-git-pugin-test.git # timeout=10
+17:18:43 Fetching upstream changes from git@github.com:omitrowski/jenkins-git-pugin-test.git
+17:18:43 using GIT_SSH to set credentials jenkins-pk
+17:18:43  > git fetch --tags --progress git@github.com:omitrowski/jenkins-git-pugin-test.git +refs/heads/*:refs/remotes/origin/*
+17:18:44  > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+17:18:44  > git rev-parse refs/remotes/origin/refs/heads/master^{commit} # timeout=10
+17:18:44 Checking out Revision 89c6a10fc8b0809daa7867cb0386806c508f15bf (refs/remotes/origin/master)
+17:18:44  > git config core.sparsecheckout # timeout=10
+17:18:44  > git checkout -f 89c6a10fc8b0809daa7867cb0386806c508f15bf
+17:18:44 Commit message: "modification from Jenkins  (4)"
+17:18:44  > git rev-list --no-walk 1f248ae80d3696d5e809895bb7194262df92d9ca # timeout=10
+17:18:44 [Test Job A - Test case 1a] $ /bin/bash /tmp/jenkins8191080186289701734.sh
+17:18:44 + echo 'modification from Jenkins Test case 1.x/Test Job A - Test case 1a (5)'
+17:18:44 + git diff
+17:18:44 diff --git a/test-files/single-file.txt b/test-files/single-file.txt
+17:18:44 index 5a4e981..534899e 100644
+17:18:44 --- a/test-files/single-file.txt
+17:18:44 +++ b/test-files/single-file.txt
+17:18:44 @@ -4,3 +4,4 @@ manual modification from clone #2
+17:18:44  modification from Jenkins  (2)
+17:18:44  modification from Jenkins  (3)
+17:18:44  modification from Jenkins  (4)
+17:18:44 +modification from Jenkins Test case 1.x/Test Job A - Test case 1a (5)
+17:18:44 + sleep 60
+17:19:44 + git commit -am 'modification from Jenkins Test case 1.x/Test Job A - Test case 1a (5)'
+17:19:44 [detached HEAD 8c6401c] modification from Jenkins Test case 1.x/Test Job A - Test case 1a (5)
+17:19:44  1 file changed, 1 insertion(+)
+17:19:44 using credential jenkins-ssh-key
+17:19:44 Pushing HEAD to branch master at repo origin
+17:19:44  > git --version # timeout=10
+17:19:44 using GIT_SSH to set credentials jenkins-pk
+17:19:44  > git push git@github.com:omitrowski/jenkins-git-pugin-test.git HEAD:master
+17:19:46 ERROR: Failed to push branch master to origin
+17:19:46 hudson.plugins.git.GitException: Command "git push git@github.com:omitrowski/jenkins-git-pugin-test.git HEAD:master" returned status code 1:
+17:19:46 stdout:
+17:19:46 stderr: To github.com:omitrowski/jenkins-git-pugin-test.git
+17:19:46  ! [rejected]        HEAD -> master (fetch first)
+17:19:46 error: failed to push some refs to 'git@github.com:omitrowski/jenkins-git-pugin-test.git'
+17:19:46 hint: Updates were rejected because the remote contains work that you do
+17:19:46 hint: not have locally. This is usually caused by another repository pushing
+17:19:46 hint: to the same ref. You may want to first integrate the remote changes
+17:19:46 hint: (e.g., 'git pull ...') before pushing again.
+17:19:46 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+17:19:46
+17:19:46 	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2042)
+17:19:46 	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:1761)
+17:19:46 	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.access$400(CliGitAPIImpl.java:72)
+17:19:46 	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$8.execute(CliGitAPIImpl.java:2121)
+17:19:46 	at hudson.plugins.git.GitPublisher.perform(GitPublisher.java:328)
+17:19:46 	at hudson.tasks.BuildStepMonitor$3.perform(BuildStepMonitor.java:45)
+17:19:46 	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:741)
+17:19:46 	at hudson.model.AbstractBuild$AbstractBuildExecution.performAllBuildSteps(AbstractBuild.java:690)
+17:19:46 	at hudson.model.Build$BuildExecution.post2(Build.java:186)
+17:19:46 	at hudson.model.AbstractBuild$AbstractBuildExecution.post(AbstractBuild.java:635)
+17:19:46 	at hudson.model.Run.execute(Run.java:1843)
+17:19:46 	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+17:19:46 	at hudson.model.ResourceController.execute(ResourceController.java:97)
+17:19:46 	at hudson.model.Executor.run(Executor.java:429)
+17:19:46 Build step 'Git Publisher' marked build as failure
+17:19:46 Finished: FAILURE

@@ -1,0 +1,48 @@
+Started by upstream project "Test case 1.x/Trigger" build number 1
+originally caused by:
+ Started by user Tester
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/Test case 1.x/Test Job A - Test case 1a
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+using credential jenkins-ssh-key
+Cloning the remote Git repository
+Cloning repository git@github.com:omitrowski/jenkins-git-pugin-test.git
+ > git init /var/jenkins_home/workspace/Test case 1.x/Test Job A - Test case 1a # timeout=10
+Fetching upstream changes from git@github.com:omitrowski/jenkins-git-pugin-test.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins-pk
+ > git fetch --tags --progress git@github.com:omitrowski/jenkins-git-pugin-test.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url git@github.com:omitrowski/jenkins-git-pugin-test.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:omitrowski/jenkins-git-pugin-test.git # timeout=10
+Fetching upstream changes from git@github.com:omitrowski/jenkins-git-pugin-test.git
+using GIT_SSH to set credentials jenkins-pk
+ > git fetch --tags --progress git@github.com:omitrowski/jenkins-git-pugin-test.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/refs/heads/master^{commit} # timeout=10
+Checking out Revision 94d2b61d02907dd0706c8f34a722d759df4ea5a8 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 94d2b61d02907dd0706c8f34a722d759df4ea5a8
+Commit message: "[MOD] some editing"
+First time build. Skipping changelog.
+[Test Job A - Test case 1a] $ /bin/bash /tmp/jenkins3408030942438559733.sh
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'root@9323a98a1f2f.(none)')
+Build step 'Execute shell' marked build as failure
+using credential jenkins-ssh-key
+Pushing HEAD to branch master at repo origin
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins-pk
+ > git push git@github.com:omitrowski/jenkins-git-pugin-test.git HEAD:master
+Finished: FAILURE

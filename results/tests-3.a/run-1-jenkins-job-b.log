@@ -1,0 +1,61 @@
+18:13:29 Started by upstream project "Test case 3.x/Trigger" build number 1
+18:13:29 originally caused by:
+18:13:29  Started by user Tester
+18:13:29 Running as SYSTEM
+18:13:29 Building in workspace /var/jenkins_home/workspace/Test case 3.x/Test Job B - Test case 3a
+18:13:29 [WS-CLEANUP] Deleting project workspace...
+18:13:29 [WS-CLEANUP] Deferred wipeout is used...
+18:13:29 using credential jenkins-ssh-key
+18:13:29 Cloning the remote Git repository
+18:13:29 Cloning repository git@github.com:omitrowski/jenkins-git-pugin-test.git
+18:13:29  > git init /var/jenkins_home/workspace/Test case 3.x/Test Job B - Test case 3a # timeout=10
+18:13:29 Fetching upstream changes from git@github.com:omitrowski/jenkins-git-pugin-test.git
+18:13:29  > git --version # timeout=10
+18:13:29 using GIT_SSH to set credentials jenkins-pk
+18:13:29  > git fetch --tags --progress git@github.com:omitrowski/jenkins-git-pugin-test.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+18:13:31  > git config remote.origin.url git@github.com:omitrowski/jenkins-git-pugin-test.git # timeout=10
+18:13:31  > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+18:13:31  > git config remote.origin.url git@github.com:omitrowski/jenkins-git-pugin-test.git # timeout=10
+18:13:31 Fetching upstream changes from git@github.com:omitrowski/jenkins-git-pugin-test.git
+18:13:31 using GIT_SSH to set credentials jenkins-pk
+18:13:31  > git fetch --tags --progress git@github.com:omitrowski/jenkins-git-pugin-test.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+
+18:13:33  > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+18:13:33  > git rev-parse refs/remotes/origin/refs/heads/master^{commit} # timeout=10
+18:13:33 Checking out Revision 1fb41db216e041e36bb6efe9614f51e9f6eb0dd2 (refs/remotes/origin/master)
+18:13:33  > git config core.sparsecheckout # timeout=10
+18:13:33  > git checkout -f 1fb41db216e041e36bb6efe9614f51e9f6eb0dd2 # timeout=10
+18:13:33 Commit message: "modification from Jenkins Test case 2.x/Test Job B - Test case 1b (1)"
+18:13:33 First time build. Skipping changelog.
+18:13:33 [Test Job B - Test case 3a] $ /bin/bash /tmp/jenkins7188026501507519750.sh
+18:13:33 + echo 'modification from Jenkins Test case 3.x/Test Job B - Test case 3a (1)'
+18:13:33 + git diff
+18:13:33 diff --git a/test-files/single-file.txt b/test-files/single-file.txt
+18:13:33 index fac137d..ce794e5 100644
+18:13:33 --- a/test-files/single-file.txt
+18:13:33 +++ b/test-files/single-file.txt
+18:13:33 @@ -6,3 +6,4 @@ modification from Jenkins  (3)
+18:13:33  modification from Jenkins  (4)
+18:13:33  modification from Jenkins Test case 1.x/Test Job B - Test case 1a (5)
+18:13:33  modification from Jenkins Test case 2.x/Test Job B - Test case 1a (1)
+18:13:33 +modification from Jenkins Test case 3.x/Test Job B - Test case 3a (1)
+18:13:33 + sleep 20
+
+18:13:53 + git commit -am 'modification from Jenkins Test case 3.x/Test Job B - Test case 3a (1)'
+18:13:53 [detached HEAD 2615e10] modification from Jenkins Test case 3.x/Test Job B - Test case 3a (1)
+18:13:53  1 file changed, 1 insertion(+)
+18:13:53 using credential jenkins-ssh-key
+18:13:53 Fetch and rebase with master of origin
+18:13:53 Fetching upstream changes from git@github.com:omitrowski/jenkins-git-pugin-test.git
+18:13:53  > git --version # timeout=10
+18:13:53 using GIT_SSH to set credentials jenkins-pk
+18:13:53  > git fetch --tags --progress git@github.com:omitrowski/jenkins-git-pugin-test.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+
+18:13:54  > git rev-parse HEAD^{commit} # timeout=10
+18:13:54  > git rev-parse origin/master^{commit} # timeout=10
+18:13:54  > git rebase origin/master # timeout=10
+18:13:54 Pushing HEAD to branch master at repo origin
+18:13:54 using GIT_SSH to set credentials jenkins-pk
+18:13:54  > git push git@github.com:omitrowski/jenkins-git-pugin-test.git HEAD:master # timeout=10
+
+18:13:57 Finished: SUCCESS
