@@ -1,0 +1,63 @@
+commit 665263c9398eec8a4ccee1d01d267b8b4667893f
+Author: Oskar <o.mitrowski@gmail.com>
+Date:   Sun Apr 28 15:02:40 2019 +0200
+
+    Test preparation case b, manual modification from clone #2
+
+commit 8380bf6cf2d91f3f0b50eacd5fef26b821cb5b64
+Author: Oskar <o.mitrowski@gmail.com>
+Date:   Sun Apr 28 15:02:35 2019 +0200
+
+    Test preparation case b, manual modification from clone #1
+
+commit 25f22cf7dcde1726c65e1fed55bcb9d1de43b108
+Author: Oskar <o.mitrowski@gmail.com>
+Date:   Sun Apr 28 14:59:40 2019 +0200
+
+    [FIX] reset first file
+
+commit 659685b78938695fd4df814ea1c50ac09ec08174
+Author: Oskar <o.mitrowski@gmail.com>
+Date:   Sun Apr 28 14:54:15 2019 +0200
+
+    [MOD] Test preparation case a
+
+commit 7d4cd7d35f8b4b01d302408f7ce97186f848e6ab
+Merge: 9ba7116 b64f1bc
+Author: Oskar <o.mitrowski@gmail.com>
+Date:   Sun Apr 28 12:36:07 2019 +0200
+
+    Merge branch 'master' of github.com:omitrowski/jenkins-git-pugin-test
+    
+    Conflicts:
+      test-files/single-file.txt
+
+commit 9ba7116bb2b7634d0eae1ab854dd409ab22f38c1
+Author: Oskar <o.mitrowski@gmail.com>
+Date:   Sun Apr 28 12:15:45 2019 +0200
+
+    manual modification from clone #2
+
+commit b64f1bce9444af179b29482b82923fda5bebef7a
+Author: Oskar <o.mitrowski@gmail.com>
+Date:   Sun Apr 28 12:15:29 2019 +0200
+
+    manual modification from clone #1
+
+commit c61e8f5203133535028ace3c1ef58800146ba985
+Author: Oskar <o.mitrowski@gmail.com>
+Date:   Sun Apr 28 12:12:03 2019 +0200
+
+    [MOD] readme formatting
+
+commit 0b15f4fd3e20f5ac58e4d4a504d7ff0d205c751c
+Author: Oskar <o.mitrowski@gmail.com>
+Date:   Sun Apr 28 09:12:01 2019 +0200
+
+    [ADD] test scenario ideas
+
+commit 3da336b79535cf1bcc1c8d022398a00e62b09c9e
+Author: Oskarowski <mitrowski.o@gmail.com>
+Date:   Fri Apr 26 12:51:35 2019 +0200
+
+    Initial commit

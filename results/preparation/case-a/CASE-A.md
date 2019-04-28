@@ -13,8 +13,8 @@
 ### From `jenkins-git-pugin-test_2` git commit and push merged
   - ![5](5-git-commit-push.jpg)
 
-### Git log
-  - `cat results/preparation/case-1a/6-git.log`
+### Git log snipped
+  - `cat results/preparation/case-a/6-git.log`
 ```shell
 *   7d4cd7d (HEAD -> master, origin/master, origin/HEAD) Merge branch 'master' of github.com:omitrowski/jenkins-git-pugin-test
 |\
