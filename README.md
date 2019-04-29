@@ -5,12 +5,19 @@ Jenkins test environment for git plugin merge request
 - [Purpose](#purpose)
 - [Use case](#use-case)
 - [Test preparation](#test-preparation)
-- [Test scenario](#test-scenario)
 - [Test environment](#test-environment)
+- [Test preparation results](#test-preparation-results)
+  - [Case a (Details: [results/preparation/case-a/CASE-A.md][e8a25f3b])](#case-a-details-resultspreparationcase-acase-amde8a25f3b)
+  - [Case a (Details: [results/preparation/case-b/CASE-B.md][9dbffb0f])](#case-a-details-resultspreparationcase-bcase-bmd9dbffb0f)
+- [Test scenario](#test-scenario)
 - [Test cases](#test-cases)
-- [Results](#results)
-  - [Test preparation results](#test-preparation-results)
-    - [Case 1.a (Screen: `results/preparation/case-1a/`)](#case-1a-screen-resultspreparationcase-1a)
+- [Test results](#test-results)
+  - [Case 1.a. (Details: results/tests-1.a)](#case-1a-details-resultstests-1a)
+  - [Case 1.b. (Details: results/tests-1.b)](#case-1b-details-resultstests-1b)
+  - [Case 2.a. (Details: results/tests-2.a)](#case-2a-details-resultstests-2a)
+  - [Case 2.b. (Details: results/tests-2.b)](#case-2b-details-resultstests-2b)
+  - [Case 3.a. (Details: results/tests-3.a)](#case-3a-details-resultstests-3a)
+  - [Case 3.b. (Details: results/tests-3.b)](#case-3b-details-resultstests-3b)
 
 <!-- /TOC -->
 
@@ -23,8 +30,8 @@ Using same git repo in different Jenkins jobs causes git rejection while executi
 # Test preparation
 1. Determination of the expectations for test results of the merge request. The following test variants represents decisive. Their results represents the expected results of tests in Jenkins. Having two clones of this repo locally:
   - **Case a.** in both clones the same file (`test-files/single-file.txt`) is going to be modified due to appending new rows. From first clone we perform a `git pull && git push` and afterwards we try a `git pull && git rebase && git push`` on the second repo clone. In this case a auto merge on rebase should be possible.
-  - **Case b.** in both clones two different files (`test-files/first-file.txt`,`test-files/second-file.txt`, each one in different git clone folder) are going to be modified due to appending new rows. From first clone we perform a `git pull && git push` and afterwards we try a `git pull && git rebase && git push`` on the second repo clone.  In this case a auto merge on rebase should be possible.
-  - **Case c.** in both clones the same file (`test-files/single-file.txt`) is going to be modified due to replacing all rows. From first clone we perform a `git pull && git push` and afterwards we try a `git pull && git rebase && git push`` on the second repo clone.  In this case a auto merge on rebase should be not possible.
+  - **Case b.** in both clones two different files (`test-files/first-file.txt`,`test-files/second-file.txt`, each one in different git clone folder) are going to be modified due to appending new rows. From first clone we perform a `git pull && git push` and afterwards we try a `git pull && git rebase && git push` on the second repo clone.  In this case a auto merge on rebase should be possible.
+  - **Case c.** in both clones the same file (`test-files/single-file.txt`) is going to be modified due to replacing all rows. From first clone we perform a `git pull && git push` and afterwards we try a `git pull && git rebase && git push` on the second repo clone.  In this case a auto merge on rebase should be not possible.
 2. A local Jenkins installation is used via docker (`https://hub.docker.com/r/jenkins/jenkins`) managed by docker-compose (`docker-compose.yml`).
 
 
@@ -58,7 +65,7 @@ Using same git repo in different Jenkins jobs causes git rejection while executi
 
 **3.** Accordingly case **Case c.** is obsolete.
 
-### Case a (Details: [results/preparation/case-b/CASE-B.md][9dbffb0f])
+### Case b (Details: [results/preparation/case-b/CASE-B.md][9dbffb0f])
 
 **1.** As expected git push have been rejected from second git repo clone
 - ![1](results/preparation/case-b/2-git-push.jpg)
@@ -292,6 +299,7 @@ As result of the the preparation process the following test cases and expected r
 18:18:39  > git push git@github.com:omitrowski/jenkins-git-pugin-test.git HEAD:master # timeout=10
 18:18:42 Finished: SUCCESS
 ```
+- Endurance test run over 60 times the Test Case 3.b. without issues.
 
 ## Final git repo log
 ```bash
@@ -319,7 +327,6 @@ As result of the the preparation process the following test cases and expected r
 * c61e8f5 [MOD] readme formatting
 * 0b15f4f [ADD] test scenario ideas
 * 3da336b Initial commit
-[oz@oz-ThinkPad-T540p:/opt
 ```
 
 # Conclusions
@@ -328,6 +335,7 @@ As result of the the preparation process the following test cases and expected r
  - It does not change the git plugin behavior if option `rebase before push` is not activated.
  - In case of errors the messages are understandable and helpful.
  - As expected in the git log you don't see merges on successful rebase.
+
 
 [e8a25f3b]: results/preparation/case-a/CASE-A.md "CASE-A.md"
 [9dbffb0f]: results/preparation/case-b/CASE-B.md "CASE-B.md"
