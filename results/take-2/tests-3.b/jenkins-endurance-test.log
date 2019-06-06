@@ -1,0 +1,449 @@
+Running from: /usr/share/jenkins/jenkins.war
+webroot: EnvVars.masterEnvVars.get("JENKINS_HOME")
+Apr 29, 2019 8:48:36 AM org.eclipse.jetty.util.log.Log initialized
+INFO: Logging initialized @343ms to org.eclipse.jetty.util.log.JavaUtilLog
+Apr 29, 2019 8:48:36 AM winstone.Logger logInternal
+INFO: Beginning extraction from war file
+Apr 29, 2019 8:48:36 AM org.eclipse.jetty.server.handler.ContextHandler setContextPath
+WARNING: Empty contextPath
+Apr 29, 2019 8:48:36 AM org.eclipse.jetty.server.Server doStart
+INFO: jetty-9.4.z-SNAPSHOT; built: 2019-02-15T16:53:49.381Z; git: eb70b240169fcf1abbd86af36482d1c49826fa0b; jvm 1.8.0_212-8u212-b01-1~deb9u1-b01
+Apr 29, 2019 8:48:37 AM org.eclipse.jetty.webapp.StandardDescriptorProcessor visitServlet
+INFO: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+Apr 29, 2019 8:48:37 AM org.eclipse.jetty.server.session.DefaultSessionIdManager doStart
+INFO: DefaultSessionIdManager workerName=node0
+Apr 29, 2019 8:48:37 AM org.eclipse.jetty.server.session.DefaultSessionIdManager doStart
+INFO: No SessionScavenger set, using defaults
+Apr 29, 2019 8:48:37 AM org.eclipse.jetty.server.session.HouseKeeper startScavenging
+INFO: node0 Scavenging every 660000ms
+Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+Apr 29, 2019 8:48:37 AM org.eclipse.jetty.server.handler.ContextHandler doStart
+INFO: Started w.@7dc3712{Jenkins v2.174,/,file:///var/jenkins_home/war/,AVAILABLE}{/var/jenkins_home/war}
+Apr 29, 2019 8:48:37 AM org.eclipse.jetty.server.AbstractConnector doStart
+INFO: Started ServerConnector@3e78b6a5{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+Apr 29, 2019 8:48:37 AM org.eclipse.jetty.server.Server doStart
+INFO: Started @1252ms
+Apr 29, 2019 8:48:37 AM winstone.Logger logInternal
+INFO: Winstone Servlet Engine v4.0 running: controlPort=disabled
+Apr 29, 2019 8:48:39 AM jenkins.InitReactorRunner$1 onAttained
+INFO: Started initialization
+Apr 29, 2019 8:48:39 AM jenkins.InitReactorRunner$1 onAttained
+INFO: Listed all plugins
+Apr 29, 2019 8:48:44 AM jenkins.InitReactorRunner$1 onAttained
+INFO: Prepared all plugins
+Apr 29, 2019 8:48:44 AM jenkins.InitReactorRunner$1 onAttained
+INFO: Started all plugins
+Apr 29, 2019 8:48:45 AM hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1 error
+INFO: Failed to instantiate optional component hudson.plugins.build_timeout.operations.AbortAndRestartOperation$DescriptorImpl; skipping
+Apr 29, 2019 8:48:45 AM jenkins.InitReactorRunner$1 onAttained
+INFO: Augmented all extensions
+Apr 29, 2019 8:48:45 AM jenkins.InitReactorRunner$1 onAttained
+INFO: Loaded all jobs
+Apr 29, 2019 8:48:45 AM hudson.model.AsyncPeriodicWork$1 run
+INFO: Started Download metadata
+Apr 29, 2019 8:48:45 AM hudson.util.Retrier start
+INFO: Attempt #1 to do the action check updates server
+Apr 29, 2019 8:48:46 AM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.web.context.support.StaticWebApplicationContext@6418650d: display name [Root WebApplicationContext]; startup date [Mon Apr 29 08:48:46 UTC 2019]; root of context hierarchy
+Apr 29, 2019 8:48:46 AM org.springframework.context.support.AbstractApplicationContext obtainFreshBeanFactory
+INFO: Bean factory for application context [org.springframework.web.context.support.StaticWebApplicationContext@6418650d]: org.springframework.beans.factory.support.DefaultListableBeanFactory@72d5c8fc
+Apr 29, 2019 8:48:46 AM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@72d5c8fc: defining beans [authenticationManager]; root of factory hierarchy
+Apr 29, 2019 8:48:46 AM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.web.context.support.StaticWebApplicationContext@5b197021: display name [Root WebApplicationContext]; startup date [Mon Apr 29 08:48:46 UTC 2019]; root of context hierarchy
+Apr 29, 2019 8:48:46 AM org.springframework.context.support.AbstractApplicationContext obtainFreshBeanFactory
+INFO: Bean factory for application context [org.springframework.web.context.support.StaticWebApplicationContext@5b197021]: org.springframework.beans.factory.support.DefaultListableBeanFactory@1ca9d5a6
+Apr 29, 2019 8:48:46 AM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1ca9d5a6: defining beans [filter,legacy]; root of factory hierarchy
+Apr 29, 2019 8:48:46 AM jenkins.InitReactorRunner$1 onAttained
+INFO: Completed initialization
+Apr 29, 2019 8:48:46 AM hudson.WebAppMain$3 run
+INFO: Jenkins is fully up and running
+Apr 29, 2019 8:48:50 AM hudson.model.UpdateSite updateData
+INFO: Obtained the latest update center data file for UpdateSource default
+Apr 29, 2019 8:48:50 AM hudson.model.DownloadService$Downloadable load
+INFO: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+Apr 29, 2019 8:48:51 AM hudson.model.DownloadService$Downloadable load
+INFO: Obtained the updated data file for hudson.plugins.gradle.GradleInstaller
+Apr 29, 2019 8:48:51 AM hudson.model.DownloadService$Downloadable load
+INFO: Obtained the updated data file for hudson.tasks.Ant.AntInstaller
+Apr 29, 2019 8:48:52 AM hudson.model.DownloadService$Downloadable load
+INFO: Obtained the updated data file for hudson.tools.JDKInstaller
+Apr 29, 2019 8:48:52 AM hudson.util.Retrier start
+INFO: Performed the action check updates server successfully at the attempt #1
+Apr 29, 2019 8:48:52 AM hudson.model.AsyncPeriodicWork$1 run
+INFO: Finished Download metadata. 6,449 ms
+Apr 29, 2019 8:50:14 AM hudson.security.csrf.CrumbFilter doFilter
+WARNING: Found invalid crumb 84cdc5fc41f6847083faf59b4756464b.  Will check remaining parameters for a valid one...
+Apr 29, 2019 8:50:14 AM hudson.security.csrf.CrumbFilter doFilter
+WARNING: No valid crumb was included in request for /job/Test%20case%202.x/job/Test%20Job%20B%20-%20Test%20case%201b/buildHistory/ajax by tester. Returning 403.
+Apr 29, 2019 8:53:28 AM org.kohsuke.stapler.LocaleDrivenResourceProvider getLocaleDrivenResourceProviders
+INFO: Registered LocaleDrivenResourceProvider: jenkins.MetaLocaleDrivenResourceProvider@6befacee
+Apr 29, 2019 9:26:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #3 main build action completed: SUCCESS
+Apr 29, 2019 9:26:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #2 main build action completed: SUCCESS
+Apr 29, 2019 9:27:12 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #2 main build action completed: SUCCESS
+Apr 29, 2019 9:29:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #4 main build action completed: SUCCESS
+Apr 29, 2019 9:29:31 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #3 main build action completed: SUCCESS
+Apr 29, 2019 9:30:12 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #3 main build action completed: SUCCESS
+Apr 29, 2019 9:32:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #5 main build action completed: SUCCESS
+Apr 29, 2019 9:32:31 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #4 main build action completed: SUCCESS
+Apr 29, 2019 9:33:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #4 main build action completed: SUCCESS
+Apr 29, 2019 9:35:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #6 main build action completed: SUCCESS
+Apr 29, 2019 9:35:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #5 main build action completed: SUCCESS
+Apr 29, 2019 9:36:12 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #5 main build action completed: SUCCESS
+Apr 29, 2019 9:38:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #7 main build action completed: SUCCESS
+Apr 29, 2019 9:38:31 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #6 main build action completed: SUCCESS
+Apr 29, 2019 9:39:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #6 main build action completed: SUCCESS
+Apr 29, 2019 9:41:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #8 main build action completed: SUCCESS
+Apr 29, 2019 9:41:31 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #7 main build action completed: SUCCESS
+Apr 29, 2019 9:42:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #7 main build action completed: SUCCESS
+Apr 29, 2019 9:44:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #9 main build action completed: SUCCESS
+Apr 29, 2019 9:44:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #8 main build action completed: SUCCESS
+Apr 29, 2019 9:45:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #8 main build action completed: SUCCESS
+Apr 29, 2019 9:47:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #10 main build action completed: SUCCESS
+Apr 29, 2019 9:47:31 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #9 main build action completed: SUCCESS
+Apr 29, 2019 9:48:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #9 main build action completed: SUCCESS
+Apr 29, 2019 9:50:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #11 main build action completed: SUCCESS
+Apr 29, 2019 9:50:33 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #10 main build action completed: SUCCESS
+Apr 29, 2019 9:51:13 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #10 main build action completed: SUCCESS
+Apr 29, 2019 9:53:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #12 main build action completed: SUCCESS
+Apr 29, 2019 9:53:31 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #11 main build action completed: SUCCESS
+Apr 29, 2019 9:54:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #11 main build action completed: SUCCESS
+Apr 29, 2019 9:56:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #13 main build action completed: SUCCESS
+Apr 29, 2019 9:56:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #12 main build action completed: SUCCESS
+Apr 29, 2019 9:57:12 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #12 main build action completed: SUCCESS
+Apr 29, 2019 9:59:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #14 main build action completed: SUCCESS
+Apr 29, 2019 9:59:31 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #13 main build action completed: SUCCESS
+Apr 29, 2019 10:00:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #13 main build action completed: SUCCESS
+Apr 29, 2019 10:02:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #15 main build action completed: SUCCESS
+Apr 29, 2019 10:02:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #14 main build action completed: SUCCESS
+Apr 29, 2019 10:03:13 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #14 main build action completed: SUCCESS
+Apr 29, 2019 10:05:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #16 main build action completed: SUCCESS
+Apr 29, 2019 10:05:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #15 main build action completed: SUCCESS
+Apr 29, 2019 10:06:12 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #15 main build action completed: SUCCESS
+Apr 29, 2019 10:08:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #17 main build action completed: SUCCESS
+Apr 29, 2019 10:08:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #16 main build action completed: SUCCESS
+Apr 29, 2019 10:09:12 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #16 main build action completed: SUCCESS
+Apr 29, 2019 10:11:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #18 main build action completed: SUCCESS
+Apr 29, 2019 10:11:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #17 main build action completed: SUCCESS
+Apr 29, 2019 10:12:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #17 main build action completed: SUCCESS
+Apr 29, 2019 10:14:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #19 main build action completed: SUCCESS
+Apr 29, 2019 10:14:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #18 main build action completed: SUCCESS
+Apr 29, 2019 10:15:12 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #18 main build action completed: SUCCESS
+Apr 29, 2019 10:17:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #20 main build action completed: SUCCESS
+Apr 29, 2019 10:17:31 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #19 main build action completed: SUCCESS
+Apr 29, 2019 10:18:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #19 main build action completed: SUCCESS
+Apr 29, 2019 10:20:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #21 main build action completed: SUCCESS
+Apr 29, 2019 10:20:33 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #20 main build action completed: SUCCESS
+Apr 29, 2019 10:21:13 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #20 main build action completed: SUCCESS
+Apr 29, 2019 10:23:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #22 main build action completed: SUCCESS
+Apr 29, 2019 10:23:31 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #21 main build action completed: SUCCESS
+Apr 29, 2019 10:24:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #21 main build action completed: SUCCESS
+Apr 29, 2019 10:26:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #23 main build action completed: SUCCESS
+Apr 29, 2019 10:26:31 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #22 main build action completed: SUCCESS
+Apr 29, 2019 10:27:12 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #22 main build action completed: SUCCESS
+Apr 29, 2019 10:29:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #24 main build action completed: SUCCESS
+Apr 29, 2019 10:29:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #23 main build action completed: SUCCESS
+Apr 29, 2019 10:30:12 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #23 main build action completed: SUCCESS
+Apr 29, 2019 10:32:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #25 main build action completed: SUCCESS
+Apr 29, 2019 10:32:31 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #24 main build action completed: SUCCESS
+Apr 29, 2019 10:33:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #24 main build action completed: SUCCESS
+Apr 29, 2019 10:35:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #26 main build action completed: SUCCESS
+Apr 29, 2019 10:35:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #25 main build action completed: SUCCESS
+Apr 29, 2019 10:36:12 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #25 main build action completed: SUCCESS
+Apr 29, 2019 10:38:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #27 main build action completed: SUCCESS
+Apr 29, 2019 10:38:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #26 main build action completed: SUCCESS
+Apr 29, 2019 10:39:12 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #26 main build action completed: SUCCESS
+Apr 29, 2019 10:41:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #28 main build action completed: SUCCESS
+Apr 29, 2019 10:41:31 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #27 main build action completed: SUCCESS
+Apr 29, 2019 10:42:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #27 main build action completed: SUCCESS
+Apr 29, 2019 10:44:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #29 main build action completed: SUCCESS
+Apr 29, 2019 10:44:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #28 main build action completed: SUCCESS
+Apr 29, 2019 10:45:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #28 main build action completed: SUCCESS
+Apr 29, 2019 10:47:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #30 main build action completed: SUCCESS
+Apr 29, 2019 10:47:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #29 main build action completed: SUCCESS
+Apr 29, 2019 10:48:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #29 main build action completed: SUCCESS
+Apr 29, 2019 10:50:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #31 main build action completed: SUCCESS
+Apr 29, 2019 10:50:33 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #30 main build action completed: SUCCESS
+Apr 29, 2019 10:51:13 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #30 main build action completed: SUCCESS
+Apr 29, 2019 10:53:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #32 main build action completed: SUCCESS
+Apr 29, 2019 10:53:31 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #31 main build action completed: SUCCESS
+Apr 29, 2019 10:54:12 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #31 main build action completed: SUCCESS
+Apr 29, 2019 10:56:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #33 main build action completed: SUCCESS
+Apr 29, 2019 10:56:31 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #32 main build action completed: SUCCESS
+Apr 29, 2019 10:57:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #32 main build action completed: SUCCESS
+Apr 29, 2019 10:59:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #34 main build action completed: SUCCESS
+Apr 29, 2019 10:59:31 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #33 main build action completed: SUCCESS
+Apr 29, 2019 11:00:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #33 main build action completed: SUCCESS
+Apr 29, 2019 11:02:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #35 main build action completed: SUCCESS
+Apr 29, 2019 11:02:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #34 main build action completed: SUCCESS
+Apr 29, 2019 11:03:13 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #34 main build action completed: SUCCESS
+Apr 29, 2019 11:05:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #36 main build action completed: SUCCESS
+Apr 29, 2019 11:05:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #35 main build action completed: SUCCESS
+Apr 29, 2019 11:06:12 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #35 main build action completed: SUCCESS
+Apr 29, 2019 11:08:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #37 main build action completed: SUCCESS
+Apr 29, 2019 11:08:35 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #36 main build action completed: SUCCESS
+Apr 29, 2019 11:09:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #36 main build action completed: SUCCESS
+Apr 29, 2019 11:11:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #38 main build action completed: SUCCESS
+Apr 29, 2019 11:11:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #37 main build action completed: SUCCESS
+Apr 29, 2019 11:12:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #37 main build action completed: SUCCESS
+Apr 29, 2019 11:14:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #39 main build action completed: SUCCESS
+Apr 29, 2019 11:14:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #38 main build action completed: SUCCESS
+Apr 29, 2019 11:15:12 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #38 main build action completed: SUCCESS
+Apr 29, 2019 11:17:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #40 main build action completed: SUCCESS
+Apr 29, 2019 11:17:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #39 main build action completed: SUCCESS
+Apr 29, 2019 11:18:12 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #39 main build action completed: SUCCESS
+Apr 29, 2019 11:20:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #41 main build action completed: SUCCESS
+Apr 29, 2019 11:20:34 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #40 main build action completed: SUCCESS
+Apr 29, 2019 11:21:13 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #40 main build action completed: SUCCESS
+Apr 29, 2019 11:23:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #42 main build action completed: SUCCESS
+Apr 29, 2019 11:23:31 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #41 main build action completed: SUCCESS
+Apr 29, 2019 11:24:14 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #41 main build action completed: SUCCESS
+Apr 29, 2019 11:26:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #43 main build action completed: SUCCESS
+Apr 29, 2019 11:26:32 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #42 main build action completed: SUCCESS
+Apr 29, 2019 11:27:12 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #42 main build action completed: SUCCESS
+Apr 29, 2019 11:29:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #44 main build action completed: SUCCESS
+Apr 29, 2019 11:29:31 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #43 main build action completed: SUCCESS
+Apr 29, 2019 11:30:11 AM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #43 main build action completed: SUCCESS
+Apr 29, 2019 11:32:00 AM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #45 main build action completed: SUCCESS
+Apr 29, 2019 1:49:07 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #44 main build action completed: SUCCESS
+Apr 29, 2019 1:49:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #46 main build action completed: SUCCESS
+Apr 29, 2019 1:49:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #47 main build action completed: SUCCESS
+Apr 29, 2019 1:49:47 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #44 main build action completed: SUCCESS
+Apr 29, 2019 1:50:09 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #45 main build action completed: SUCCESS
+Apr 29, 2019 1:50:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #48 main build action completed: SUCCESS
+Apr 29, 2019 1:50:56 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #45 main build action completed: SUCCESS
+Apr 29, 2019 1:51:12 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #46 main build action completed: SUCCESS
+Apr 29, 2019 1:52:08 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #46 main build action completed: SUCCESS
+Apr 29, 2019 1:53:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #49 main build action completed: SUCCESS
+Apr 29, 2019 1:54:09 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #47 main build action completed: SUCCESS
+Apr 29, 2019 1:54:49 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #47 main build action completed: SUCCESS
+Apr 29, 2019 1:56:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #50 main build action completed: SUCCESS
+Apr 29, 2019 1:57:12 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #48 main build action completed: SUCCESS
+Apr 29, 2019 1:57:49 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #48 main build action completed: SUCCESS
+Apr 29, 2019 1:59:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #51 main build action completed: SUCCESS
+Apr 29, 2019 2:00:10 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #49 main build action completed: SUCCESS
+Apr 29, 2019 2:00:49 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #49 main build action completed: SUCCESS
+Apr 29, 2019 2:02:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #52 main build action completed: SUCCESS
+Apr 29, 2019 2:03:10 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #50 main build action completed: SUCCESS
+Apr 29, 2019 2:03:49 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #50 main build action completed: SUCCESS
+Apr 29, 2019 2:05:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #53 main build action completed: SUCCESS
+Apr 29, 2019 2:06:14 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #51 main build action completed: SUCCESS
+Apr 29, 2019 2:06:49 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #51 main build action completed: SUCCESS
+Apr 29, 2019 2:08:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #54 main build action completed: SUCCESS
+Apr 29, 2019 2:09:10 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #52 main build action completed: SUCCESS
+Apr 29, 2019 2:09:49 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #52 main build action completed: SUCCESS
+Apr 29, 2019 2:11:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #55 main build action completed: SUCCESS
+Apr 29, 2019 2:12:09 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #53 main build action completed: SUCCESS
+Apr 29, 2019 2:12:50 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #53 main build action completed: SUCCESS
+Apr 29, 2019 2:14:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #56 main build action completed: SUCCESS
+Apr 29, 2019 2:15:09 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #54 main build action completed: SUCCESS
+Apr 29, 2019 2:15:49 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #54 main build action completed: SUCCESS
+Apr 29, 2019 2:17:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #57 main build action completed: SUCCESS
+Apr 29, 2019 2:18:11 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #55 main build action completed: SUCCESS
+Apr 29, 2019 2:18:49 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #55 main build action completed: SUCCESS
+Apr 29, 2019 2:20:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #58 main build action completed: SUCCESS
+Apr 29, 2019 2:21:09 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #56 main build action completed: SUCCESS
+Apr 29, 2019 2:21:49 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #56 main build action completed: SUCCESS
+Apr 29, 2019 2:23:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #59 main build action completed: SUCCESS
+Apr 29, 2019 2:24:09 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #57 main build action completed: SUCCESS
+Apr 29, 2019 2:24:49 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #57 main build action completed: SUCCESS
+Apr 29, 2019 2:26:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #60 main build action completed: SUCCESS
+Apr 29, 2019 2:27:10 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #58 main build action completed: SUCCESS
+Apr 29, 2019 2:27:49 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #58 main build action completed: SUCCESS
+Apr 29, 2019 2:29:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #61 main build action completed: SUCCESS
+Apr 29, 2019 2:30:10 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #59 main build action completed: SUCCESS
+Apr 29, 2019 2:30:49 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #59 main build action completed: SUCCESS
+Apr 29, 2019 2:32:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #62 main build action completed: SUCCESS
+Apr 29, 2019 2:33:09 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #60 main build action completed: SUCCESS
+Apr 29, 2019 2:33:49 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #60 main build action completed: SUCCESS
+Apr 29, 2019 2:35:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #63 main build action completed: SUCCESS
+Apr 29, 2019 2:36:10 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #61 main build action completed: SUCCESS
+Apr 29, 2019 2:36:49 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #61 main build action completed: SUCCESS
+Apr 29, 2019 2:38:36 PM hudson.model.Run execute
+INFO: Test case 3.x/Trigger #64 main build action completed: SUCCESS
+Apr 29, 2019 2:39:10 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job B - Test case 3b #62 main build action completed: SUCCESS
+Apr 29, 2019 2:39:49 PM hudson.model.Run execute
+INFO: Test case 3.x/Test Job A - Test case 3b #62 main build action completed: SUCCESS

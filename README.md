@@ -2,22 +2,31 @@ Jenkins test environment for git plugin merge request
 ===================================
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:1 -->
 
-- [Purpose](#purpose)
-- [Use case](#use-case)
-- [Test preparation](#test-preparation)
-- [Test environment](#test-environment)
-- [Test preparation results](#test-preparation-results)
-  - [Case a (Details: [results/preparation/case-a/CASE-A.md][e8a25f3b])](#case-a-details-resultspreparationcase-acase-amde8a25f3b)
-  - [Case a (Details: [results/preparation/case-b/CASE-B.md][9dbffb0f])](#case-a-details-resultspreparationcase-bcase-bmd9dbffb0f)
-- [Test scenario](#test-scenario)
-- [Test cases](#test-cases)
-- [Test results](#test-results)
-  - [Case 1.a. (Details: results/tests-1.a)](#case-1a-details-resultstests-1a)
-  - [Case 1.b. (Details: results/tests-1.b)](#case-1b-details-resultstests-1b)
-  - [Case 2.a. (Details: results/tests-2.a)](#case-2a-details-resultstests-2a)
-  - [Case 2.b. (Details: results/tests-2.b)](#case-2b-details-resultstests-2b)
-  - [Case 3.a. (Details: results/tests-3.a)](#case-3a-details-resultstests-3a)
-  - [Case 3.b. (Details: results/tests-3.b)](#case-3b-details-resultstests-3b)
+1. [Purpose](#purpose)
+2. [Use case](#use-case)
+3. [Test preparation](#test-preparation)
+4. [Test preparation results](#test-preparation-results)
+		1. [Case a (Details: [results/preparation/case-a/CASE-A.md][e8a25f3b])](#case-a-details-resultspreparationcase-acase-amde8a25f3b)
+		2. [Case b (Details: [results/preparation/case-b/CASE-B.md][9dbffb0f])](#case-b-details-resultspreparationcase-bcase-bmd9dbffb0f)
+5. [Test scenario](#test-scenario)
+6. [Test cases](#test-cases)
+7. [Test results](#test-results)
+	1. [Take 1](#take-1)
+			1. [Case 1.a. (Details: results/take-1/tests-1.a)](#case-1a-details-resultstake-1tests-1a)
+			2. [Case 1.b. (Details: results/take-1/tests-1.b)](#case-1b-details-resultstake-1tests-1b)
+			3. [Case 2.a. (Details: results/take-1/tests-2.a)](#case-2a-details-resultstake-1tests-2a)
+			4. [Case 2.b. (Details: results/take-1/tests-2.b)](#case-2b-details-resultstake-1tests-2b)
+			5. [Case 3.a. (Details: results/take-1/tests-3.a)](#case-3a-details-resultstake-1tests-3a)
+			6. [Case 3.b. (Details: results/take-1/tests-3.b)](#case-3b-details-resultstake-1tests-3b)
+			7. [Take 1 final git repo log](#take-1-final-git-repo-log)
+			8. [Take 1 conclusions](#take-1-conclusions)
+	2. [Take 2](#take-2)
+			1. [Case 2.a. (Details: results/take-2/tests-2.a)](#case-2a-details-resultstake-2tests-2a)
+			2. [Case 2.b. (Details: results/take-2/tests-2.b)](#case-2b-details-resultstake-2tests-2b)
+			3. [Case 3.a. (Details: results/take-2/tests-3.a)](#case-3a-details-resultstake-2tests-3a)
+			4. [Case 3.b. (Details: results/take-2/tests-3.b)](#case-3b-details-resultstake-2tests-3b)
+			5. [Take 2 final git repo log](#take-2-final-git-repo-log)
+			6. [Take 2 conclusions](#take-2-conclusions)
 
 <!-- /TOC -->
 
@@ -33,24 +42,6 @@ Using same git repo in different Jenkins jobs causes git rejection while executi
   - **Case b.** in both clones two different files (`test-files/first-file.txt`,`test-files/second-file.txt`, each one in different git clone folder) are going to be modified due to appending new rows. From first clone we perform a `git pull && git push` and afterwards we try a `git pull && git rebase && git push` on the second repo clone.  In this case a auto merge on rebase should be possible.
   - **Case c.** in both clones the same file (`test-files/single-file.txt`) is going to be modified due to replacing all rows. From first clone we perform a `git pull && git push` and afterwards we try a `git pull && git rebase && git push` on the second repo clone.  In this case a auto merge on rebase should be not possible.
 2. A local Jenkins installation is used via docker (`https://hub.docker.com/r/jenkins/jenkins`) managed by docker-compose (`docker-compose.yml`).
-
-
-# Test environment
-- Operating System: Linux, Ubuntu 18.04.2 LTS
-- Kernel Version: 4.18.0-18-generic
-- Architecture: x86_64
-- CPUs: 8
-- Total Memory: 15.36GiB
-- Docker version: 18.09.2
-- Git versions:
-  - locally: 2.17.1
-  - remote: github.com
-- Jenkins version: 2.174
-  - For all test cases:
-    - Installation procedure: default plugin selection
-  - For test case 2 and 3 (Jenkins with git-plugin including rebase patch):
-    - Post installation of git client v3.0.0-beta9-rc1944 over v2.7.7 from https://ci.jenkins.io/job/Plugins/job/git-client-plugin/job/master/295/artifact/org/jenkins-ci/plugins/git-client/3.0.0-beta9-rc1944.926401690c63/git-client-3.0.0-beta9-rc1944.926401690c63.hpi
-    - Post installation of git plugin v4.0.0-beta9-rc3094 over v3.9.4 from https://ci.jenkins.io/job/Plugins/job/git-plugin/job/PR-694/5/artifact/org/jenkins-ci/plugins/git/4.0.0-beta9-rc3094.5a8adf136d1b/git-4.0.0-beta9-rc3094.5a8adf136d1b.hpi
 
 
 # Test preparation results
@@ -101,7 +92,8 @@ As result of the the preparation process the following test cases and expected r
 
 # Test results
 
-## Case 1.a. (Details: results/tests-1.a)
+## Take 1
+#### Case 1.a. (Details: results/take-1/tests-1.a)
   - Expected result: git push rejected for `Job A`, but accepted for `Job B`
   - **Tested OK**
   - Job A
@@ -132,7 +124,7 @@ As result of the the preparation process the following test cases and expected r
 17:19:08 Finished: SUCCESS
 ```
 
-## Case 1.b. (Details: results/tests-1.b)
+#### Case 1.b. (Details: results/take-1/tests-1.b)
   - Expected result: git push rejected for `Job A`, but accepted for `Job B`
   - **Tested OK**
   - Job A
@@ -163,7 +155,7 @@ As result of the the preparation process the following test cases and expected r
 17:31:08 Finished: SUCCESS
 ```
 
-## Case 2.a. (Details: results/tests-2.a)
+#### Case 2.a. (Details: results/take-1/tests-2.a)
   - Expected result: git push rejected for `Job A`, but accepted for `Job B`
   - **Tested OK**
   - Job A
@@ -193,7 +185,7 @@ As result of the the preparation process the following test cases and expected r
 17:47:13  > git push git@github.com:omitrowski/jenkins-git-pugin-test.git HEAD:master # timeout=10
 ```
 
-## Case 2.b. (Details: results/tests-2.b)
+#### Case 2.b. (Details: results/take-1/tests-2.b)
   - Expected result: git push rejected for `Job A`, but accepted for `Job B`
   - **Tested OK**
   - Job A
@@ -224,7 +216,7 @@ As result of the the preparation process the following test cases and expected r
 17:51:35 Finished: SUCCESS
 ```
 
-## Case 3.a. (Details: results/tests-3.a)
+#### Case 3.a. (Details: results/take-1/tests-3.a)
   - Expected result: git push rejected for `Job A`, but accepted for `Job B`
   - **Tested OK**
   - Job A
@@ -274,7 +266,7 @@ As result of the the preparation process the following test cases and expected r
 18:13:57 Finished: SUCCESS
 ```
 
-## Case 3.b. (Details: results/tests-3.b)
+#### Case 3.b. (Details: results/take-1/tests-3.b)
   - Expected result: git push accepted for `Job A` and `Job B`
   - **Tested OK**
   - Job A
@@ -301,7 +293,7 @@ As result of the the preparation process the following test cases and expected r
 ```
 - Endurance test run over 60 times the Test Case 3.b. without issues.
 
-## Final git repo log
+#### Take 1 final git repo log
 ```bash
 * 41af67f modification from Jenkins Test case 3.x/Test Job A - Test case 3b (1)
 * d6de91f modification from Jenkins Test case 3.x/Test Job B - Test case 3b (1)
@@ -329,7 +321,7 @@ As result of the the preparation process the following test cases and expected r
 * 3da336b Initial commit
 ```
 
-# Conclusions
+#### Take 1 conclusions
 
  - The patch from the merge request behaves predictable and meets the expected functionality.
  - It does not change the git plugin behavior if option `rebase before push` is not activated.
@@ -337,6 +329,183 @@ As result of the the preparation process the following test cases and expected r
  - As expected in the git log you don't see merges on successful rebase.
  - Endurance test run over 60 times without issues.
 
+## Take 2
+
+#### Case 2.a. (Details: results/take-2/tests-2.a)
+  - Expected result: git push rejected for `Job A`, but accepted for `Job B`
+  - **Tested OK**
+  - Job A
+```bash
+21:38:09  > git push git@github.com:omitrowski/jenkins-git-pugin-test.git HEAD:master # timeout=10
+21:38:10 ERROR: Failed to push branch master to origin
+21:38:10 hudson.plugins.git.GitException: Command "git push git@github.com:omitrowski/jenkins-git-pugin-test.git HEAD:master" returned status code 1:
+21:38:10 stdout:
+21:38:10 stderr: To github.com:omitrowski/jenkins-git-pugin-test.git
+21:38:10  ! [rejected]        HEAD -> master (fetch first)
+21:38:10 error: failed to push some refs to 'git@github.com:omitrowski/jenkins-git-pugin-test.git'
+```
+  - Job B
+```bash
+21:37:29 + git commit -am 'modification from Jenkins Test case 2.x/Test Job B - Test case 1a (2)'
+21:37:29 [detached HEAD c412ada] modification from Jenkins Test case 2.x/Test Job B - Test case 1a (2)
+21:37:29  1 file changed, 1 insertion(+)
+21:37:29 using credential jenkins-ssh-key
+21:37:29 Pushing HEAD to branch master at repo origin
+21:37:29  > git --version # timeout=10
+21:37:29 using GIT_SSH to set credentials jenkins-pk
+21:37:29  > git push git@github.com:omitrowski/jenkins-git-pugin-test.git HEAD:master # timeout=10
+```
+
+#### Case 2.b. (Details: results/take-2/tests-2.b)
+  - Expected result: git push rejected for `Job A`, but accepted for `Job B`
+  - **Tested OK**
+  - Job A
+```bash
+21:53:51 ERROR: Failed to push branch master to origin
+21:53:51 hudson.plugins.git.GitException: Command "git push git@github.com:omitrowski/jenkins-git-pugin-test.git HEAD:master" returned status code 1:
+21:53:51 stdout:
+21:53:51 stderr: To github.com:omitrowski/jenkins-git-pugin-test.git
+21:53:51  ! [rejected]        HEAD -> master (fetch first)
+21:53:51 error: failed to push some refs to 'git@github.com:omitrowski/jenkins-git-pugin-test.git'
+```
+  - Job B
+```bash
+21:53:10 + git commit -am 'modification from Jenkins Test case 2.x/Test Job B - Test case 1b (2)'
+21:53:10 [detached HEAD 6feb9dc] modification from Jenkins Test case 2.x/Test Job B - Test case 1b (2)
+21:53:10  1 file changed, 1 insertion(+)
+21:53:10 using credential jenkins-ssh-key
+21:53:10 Pushing HEAD to branch master at repo origin
+```
+
+#### Case 3.a. (Details: results/take-2/tests-3.a)
+  - Expected result: git push rejected for `Job A`, but accepted for `Job B`
+  - **Tested OK**
+  - Job A
+```bash
+21:59:39 [detached HEAD 3c19e0a] modification from Jenkins Test case 3.x/Test Job A - Test case 3a (2)
+21:59:39  1 file changed, 1 insertion(+)
+21:59:39 using credential jenkins-ssh-key
+21:59:39 Fetch and rebase with master of origin
+21:59:39 Fetching upstream changes from git@github.com:omitrowski/jenkins-git-pugin-test.git
+21:59:39  > git --version # timeout=10
+21:59:39 using GIT_SSH to set credentials jenkins-pk
+21:59:39  > git fetch --tags --progress git@github.com:omitrowski/jenkins-git-pugin-test.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+21:59:41  > git rev-parse HEAD^{commit} # timeout=10
+21:59:41  > git rev-parse origin/master^{commit} # timeout=10
+21:59:41  > git rebase origin/master # timeout=10
+21:59:41  > git rebase --abort # timeout=10
+21:59:41 ERROR: Failed to push branch master to origin
+...
+21:59:41 M	test-files/single-file.txt
+21:59:41 Falling back to patching base and 3-way merge...
+21:59:41 Auto-merging test-files/single-file.txt
+21:59:41 CONFLICT (content): Merge conflict in test-files/single-file.txt
+21:59:41 Patch failed at 0001 modification from Jenkins Test case 3.x/Test Job A - Test case 3a (2)
+21:59:41 The copy of the patch that failed is found in: .git/rebase-apply/patch
+21:59:41
+21:59:41 When you have resolved this problem, run "git rebase --continue".
+21:59:41 If you prefer to skip this patch, run "git rebase --skip" instead.
+21:59:41 To check out the original branch and stop rebasing, run "git rebase --abort".
+...
+21:59:41 stderr: error: Failed to merge in the changes.
+```
+  - Job B
+```bash
+21:59:00 + git commit -am 'modification from Jenkins Test case 3.x/Test Job B - Test case 3a (2)'
+21:59:00 [detached HEAD a7e84fe] modification from Jenkins Test case 3.x/Test Job B - Test case 3a (2)
+21:59:00  1 file changed, 1 insertion(+)
+21:59:00 using credential jenkins-ssh-key
+21:59:00 Fetch and rebase with master of origin
+21:59:00 Fetching upstream changes from git@github.com:omitrowski/jenkins-git-pugin-test.git
+21:59:00  > git --version # timeout=10
+21:59:00 using GIT_SSH to set credentials jenkins-pk
+21:59:00  > git fetch --tags --progress git@github.com:omitrowski/jenkins-git-pugin-test.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+21:59:02  > git rev-parse HEAD^{commit} # timeout=10
+21:59:02  > git rev-parse origin/master^{commit} # timeout=10
+21:59:02  > git rebase origin/master # timeout=10
+21:59:02 Pushing HEAD to branch master at repo origin
+```
+
+#### Case 3.b. (Details: results/take-2/tests-3.b)
+  - Expected result: git push accepted for `Job A` and `Job B`
+  - **Tested OK**
+  - Job A
+```bash
+22:03:50 diff --git a/test-files/first-file.txt b/test-files/first-file.txt
+22:03:50 index 664cef9..62d170e 100644
+22:03:50 --- a/test-files/first-file.txt
+22:03:50 +++ b/test-files/first-file.txt
+22:03:50 @@ -66,3 +66,4 @@ modification from Jenkins Test case 3.x/Test Job A - Test case 3b (64)
+22:03:50  modification from Jenkins Test case 3.x/Test Job A - Test case 3b (65)
+22:03:50  modification from Jenkins Test case 3.x/Test Job A - Test case 3b (66)
+22:03:50  modification from Jenkins Test case 3.x/Test Job A - Test case 3b (67)
+22:03:50 +modification from Jenkins Test case 3.x/Test Job A - Test case 3b (70)
+22:03:50 + sleep 60
+22:04:50 + git commit -am 'modification from Jenkins Test case 3.x/Test Job A - Test case 3b (70)'
+22:04:50 [detached HEAD e46797e] modification from Jenkins Test case 3.x/Test Job A - Test case 3b (70)
+22:04:50  1 file changed, 1 insertion(+)
+22:04:50 using credential jenkins-ssh-key
+22:04:50 Fetch and rebase with master of origin
+22:04:50 Fetching upstream changes from git@github.com:omitrowski/jenkins-git-pugin-test.git
+22:04:50  > git --version # timeout=10
+22:04:50 using GIT_SSH to set credentials jenkins-pk
+22:04:50  > git fetch --tags --progress git@github.com:omitrowski/jenkins-git-pugin-test.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+22:04:52  > git rev-parse HEAD^{commit} # timeout=10
+22:04:52  > git rev-parse origin/master^{commit} # timeout=10
+22:04:52  > git rebase origin/master # timeout=10
+22:04:52 Pushing HEAD to branch master at repo origin
+22:04:52 using GIT_SSH to set credentials jenkins-pk
+22:04:52  > git push git@github.com:omitrowski/jenkins-git-pugin-test.git HEAD:master # timeout=10
+22:04:56 Finished: SUCCESS
+```
+  - Job B
+```bash
+22:03:50 diff --git a/test-files/second-file.txt b/test-files/second-file.txt
+22:03:50 index 53a55a2..7a921fc 100644
+22:03:50 --- a/test-files/second-file.txt
+22:03:50 +++ b/test-files/second-file.txt
+22:03:50 @@ -71,3 +71,4 @@ modification from Jenkins Test case 3.x/Test Job B - Test case 3b (66)
+22:03:50  modification from Jenkins Test case 3.x/Test Job B - Test case 3b (67)
+22:03:50  modification from Jenkins Test case 3.x/Test Job B - Test case 3b (68)
+22:03:50  modification from Jenkins Test case 2.x/Test Job B - Test case 1b (2)
+22:03:50 +modification from Jenkins Test case 3.x/Test Job B - Test case 3b (70)
+22:03:50 + sleep 20
+22:04:10 + git commit -am 'modification from Jenkins Test case 3.x/Test Job B - Test case 3b (70)'
+22:04:10 [detached HEAD cbea7d3] modification from Jenkins Test case 3.x/Test Job B - Test case 3b (70)
+22:04:10  1 file changed, 1 insertion(+)
+22:04:10 using credential jenkins-ssh-key
+22:04:10 Fetch and rebase with master of origin
+22:04:10 Fetching upstream changes from git@github.com:omitrowski/jenkins-git-pugin-test.git
+22:04:10  > git --version # timeout=10
+22:04:10 using GIT_SSH to set credentials jenkins-pk
+22:04:10  > git fetch --tags --progress git@github.com:omitrowski/jenkins-git-pugin-test.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+22:04:13  > git rev-parse HEAD^{commit} # timeout=10
+22:04:13  > git rev-parse origin/master^{commit} # timeout=10
+22:04:13  > git rebase origin/master # timeout=10
+22:04:13 Pushing HEAD to branch master at repo origin
+22:04:13 using GIT_SSH to set credentials jenkins-pk
+22:04:13  > git push git@github.com:omitrowski/jenkins-git-pugin-test.git HEAD:master # timeout=10
+22:04:17 Finished: SUCCESS
+```
+- Endurance test run over 60 times the Test Case 3.b. without issues.
+
+#### Take 2 final git repo log
+```bash
+* 9cfe746 (HEAD -> master, origin/master, origin/HEAD) modification from Jenkins Test case 3.x/Test Job A - Test case 3b (70)
+* cbea7d3 modification from Jenkins Test case 3.x/Test Job B - Test case 3b (70)
+* a7e84fe modification from Jenkins Test case 3.x/Test Job B - Test case 3a (2)
+* 6feb9dc modification from Jenkins Test case 2.x/Test Job B - Test case 1b (2)
+* c412ada modification from Jenkins Test case 2.x/Test Job B - Test case 1a (2)
+...
+```
+
+#### Take 2 conclusions
+
+ - The patch from the merge request behaves predictable and meets the expected functionality.
+ - It does not change the git plugin behavior if option `rebase before push` is not activated.
+ - In case of errors the messages are understandable and helpful.
+ - As expected in the git log you don't see merges on successful rebase.
+ - Endurance test run over 60 times without issues.
 
 [e8a25f3b]: results/preparation/case-a/CASE-A.md "CASE-A.md"
 [9dbffb0f]: results/preparation/case-b/CASE-B.md "CASE-B.md"

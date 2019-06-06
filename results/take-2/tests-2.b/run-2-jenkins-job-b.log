@@ -1,0 +1,51 @@
+Started by upstream project "Test case 2.x/Trigger" build number 4
+originally caused by:
+ Started by user Tester
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/Test case 2.x/Test Job B - Test case 1b
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+using credential jenkins-ssh-key
+Cloning the remote Git repository
+Cloning repository git@github.com:omitrowski/jenkins-git-pugin-test.git
+ > git init /var/jenkins_home/workspace/Test case 2.x/Test Job B - Test case 1b # timeout=10
+Fetching upstream changes from git@github.com:omitrowski/jenkins-git-pugin-test.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins-pk
+ > git fetch --tags --progress git@github.com:omitrowski/jenkins-git-pugin-test.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:omitrowski/jenkins-git-pugin-test.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:omitrowski/jenkins-git-pugin-test.git # timeout=10
+Fetching upstream changes from git@github.com:omitrowski/jenkins-git-pugin-test.git
+using GIT_SSH to set credentials jenkins-pk
+ > git fetch --tags --progress git@github.com:omitrowski/jenkins-git-pugin-test.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/refs/heads/master^{commit} # timeout=10
+Checking out Revision c412ada3d2f474401c1c36a30a9fd05465daf240 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c412ada3d2f474401c1c36a30a9fd05465daf240 # timeout=10
+Commit message: "modification from Jenkins Test case 2.x/Test Job B - Test case 1a (2)"
+First time build. Skipping changelog.
+[Test Job B - Test case 1b] $ /bin/bash /tmp/jenkins5836063429898752379.sh
++ echo 'modification from Jenkins Test case 2.x/Test Job B - Test case 1b (2)'
++ git diff
+diff --git a/test-files/second-file.txt b/test-files/second-file.txt
+index ad1007d..53a55a2 100644
+--- a/test-files/second-file.txt
++++ b/test-files/second-file.txt
+@@ -70,3 +70,4 @@ modification from Jenkins Test case 3.x/Test Job B - Test case 3b (65)
+ modification from Jenkins Test case 3.x/Test Job B - Test case 3b (66)
+ modification from Jenkins Test case 3.x/Test Job B - Test case 3b (67)
+ modification from Jenkins Test case 3.x/Test Job B - Test case 3b (68)
++modification from Jenkins Test case 2.x/Test Job B - Test case 1b (2)
++ sleep 20
++ git commit -am 'modification from Jenkins Test case 2.x/Test Job B - Test case 1b (2)'
+[detached HEAD 6feb9dc] modification from Jenkins Test case 2.x/Test Job B - Test case 1b (2)
+ 1 file changed, 1 insertion(+)
+using credential jenkins-ssh-key
+Pushing HEAD to branch master at repo origin
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins-pk
+ > git push git@github.com:omitrowski/jenkins-git-pugin-test.git HEAD:master # timeout=10
+Finished: SUCCESS
