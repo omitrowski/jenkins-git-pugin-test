@@ -505,7 +505,7 @@ As result of the the preparation process the following test cases and expected r
  - It does not change the git plugin behavior if option `rebase before push` is not activated.
  - In case of errors the messages are understandable and helpful.
  - As expected in the git log you don't see merges on successful rebase.
- - Endurance test run over 60 times without issues.
+ - Endurance test run over 90 times without issues.
 
 [e8a25f3b]: results/preparation/case-a/CASE-A.md "CASE-A.md"
 [9dbffb0f]: results/preparation/case-b/CASE-B.md "CASE-B.md"
